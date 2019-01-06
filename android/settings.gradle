@@ -1,0 +1,3 @@
+rootProject.name = 'demo_redux_with_async_storage'
+
+include ':app'
