@@ -4,6 +4,8 @@ import {Platform, Button, StyleSheet, Text, View} from 'react-native';
 import {connect } from 'react-redux'
 import {increaseCount} from './action_creators'
 
+import RNLanguages from 'react-native-languages';
+import i18n from './i18n';
 
 
 type Props = {};
@@ -18,7 +20,7 @@ class App extends Component<Props> {
   render() {
     return (
       <View>
-        <Text>这是个Demo, 用于演示 {"\n"}
+        <Text> {i18n.t('title', { locale: 'en'})} {"\n"}
         1. 用Redux 保存数据到 AsyncStorage, {"\n"}
         2. 读出来，{"\n"}
         3. 再渲染页面。{"\n"}
@@ -26,7 +28,7 @@ class App extends Component<Props> {
         </Text>
 
         <Button
-          title="点击我，计数器+1"
+          title={i18n.t('click_text', {locale: 'en'})}
           onPress={this.click.bind(this)}
         >
         </Button>
