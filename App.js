@@ -4,6 +4,8 @@ import {Platform, Button, StyleSheet, Text, View} from 'react-native';
 import {connect } from 'react-redux'
 import {increaseCount} from './action_creators'
 
+
+
 type Props = {};
 //...
 class App extends Component<Props> {
